@@ -1,0 +1,35 @@
+<!-- 
+    Student Name:Ahmed Ulde
+    URL Address: http://omega.uta.edu/~aau0889/project2/map.html
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display House Prices on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="map.js"></script>
+<style>
+#map-canvas{
+margin:25px;
+width:600px;
+height:500px;
+}
+</style>
+	</head>
+  <body onload="initialize();">
+    <form>
+       <label>House address: <input type="text" id="address"/></label>
+       <label>City: <input type="text" id="city"/></label>
+       <label>State: <input type="text" id="state"/></label>
+       <label>Zip Code: <input type="text" id="zipcode"/></label>
+       <input type="button" onclick="sendRequest();" value="Display Info"/>
+	   <input type="button" onclick="clearbox();" value="Clear Address"></input>
+    </form>
+	<div id="map-canvas" height="200px" width="200px"></div>
+    <div id="output">&nbsp;</div>
+	<table id="op">
+		
+	</table>
+  </body>
+</html>
