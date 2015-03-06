@@ -1,0 +1,27 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors','On');
+
+try {
+  $dbname = dirname($_SERVER["SCRIPT_FILENAME"]) . "/mydb.sqlite";
+  $dbh = new PDO("sqlite:$dbname");
+  $dbh->beginTransaction();
+  $dbh->exec('delete from users where username="smith"')
+        or die(print_r($dbh->errorInfo(), true));
+  $dbh->exec('insert into users values("smith","' . md5("mypass") . '","John Smith","smith@cse.uta.edu")')
+        or die(print_r($dbh->errorInfo(), true));
+  $dbh->commit();
+
+  $stmt = $dbh->prepare('select * from users');
+  $stmt->execute();
+  print "<pre>";
+  while ($row = $stmt->fetch()) {
+    print_r($row);
+  }
+  print "</pre>";
+} catch (PDOException $e) {
+  print "Error!: " . $e->getMessage() . "<br/>";
+  die();
+}
+?>
