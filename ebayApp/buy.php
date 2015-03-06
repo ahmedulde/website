@@ -1,5 +1,5 @@
 <!--
-Student Name: Ahmed Ulde
+Author Name: Ahmed Ulde
 URL Address: http://omega.uta.edu/~aau0889/project3/buy.php
 -->
 <!DOCTYPE HTML>
