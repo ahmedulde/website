@@ -1,6 +1,6 @@
 // Put your zillow.com API key here
-var zwsid = "X1-ZWz1b3odsxak23_8s1xw";
-//var googleapi = "AIzaSyDujNGhrLVWOxmPZLdYmZG9np0Gl6e3sA8";
+var zwsid = " ";
+//var googleapi = " ";
 
 //<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
